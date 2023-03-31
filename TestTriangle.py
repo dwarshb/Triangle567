@@ -47,17 +47,19 @@ class TestTriangles(unittest.TestCase):
     def testIsocelesTriangleA(self):
         self.assertNotEqual(classifyTriangle(10, 10, 10), 'Isoceles','10,10,10 - Should be Equilateral')
 
-     def testIsocelesTriangleB(self):
+    def testIsocelesTriangleB(self):
         self.assertNotEqual(classifyTriangle(10, 15, 30), 'Isoceles','10,15,30 - Should be Scalene')
 
-      def testIsocelesTriangleC(self):
+    def testIsocelesTriangleC(self):
         self.assertNotEqual(classifyTriangle(10, 10, 30), 'Isoceles', '10,10,30 can be isoceles, but 10+10=20 < 30')
 
-      def testIsocelesTriangleD(self):
+    def testIsocelesTriangleD(self):
         self.assertNotEqual(classifyTriangle(15, 15, 30), 'Isoceles','15,15,30 can be isoceles, but 15+15=30 == 30')
 
-      def
+    def testIsocelesTriangleE(self):
         self.assertEqual(classifyTriangle(16, 16, 30), 'Isoceles','16+16=32 > 30 and it is isoceles')
+
+    def testIsocelesTriangleF(self):
         self.assertEqual(classifyTriangle(10, 30, 30), 'Isoceles','30+30= 60 > 10 and it is isoceles')
 
     def testScaleneTriangle(self):
